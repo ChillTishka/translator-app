@@ -1,9 +1,9 @@
-// Отримуємо елементи
+
 const input = document.getElementById("input");
 const translateBtn = document.getElementById("translateBtn");
 const output = document.getElementById("output");
 
-// Асинхронна функція перекладу
+
 async function translateText() {
   const text = input.value.trim();
   if (!text) {
@@ -12,7 +12,7 @@ async function translateText() {
   }
 
   const safeText = encodeURIComponent(text);
-  const email = "example@gmail.com"; // можна вказати свій email
+  const email = "example@gmail.com"; 
   const url = `https://api.mymemory.translated.net/get?q=${safeText}&langpair=uk|en&de=${email}`;
 
   try {
@@ -25,5 +25,5 @@ async function translateText() {
   }
 }
 
-// Прив'язуємо функцію до кнопки
+
 translateBtn.addEventListener("click", translateText);
